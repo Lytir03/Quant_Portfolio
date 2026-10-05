@@ -1,0 +1,20 @@
+[project]
+name = "stochmc"
+version = "0.1.0"
+description = "Stochastic modelling and Monte Carlo methods for financial markets"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "pandas", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyter", "nbconvert"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
